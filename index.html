@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitZone Gym | Membership Plans</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="FitZone Gym home">FIT<span>ZONE</span><small>GYM</small></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#plans">Membership Plans</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="button button-small" href="#contact">Join Us</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR GOALS. YOUR PACE.</p>
+        <h1>BUILD YOUR<br><span>STRONGER SELF.</span></h1>
+        <p class="hero-description">Train with purpose. Choose a plan that fits your goals and start building a stronger routine at FitZone Gym.</p>
+        <div class="hero-actions">
+          <a class="button" href="#plans">View Plans</a>
+          <a class="button button-outline" href="#about">Learn More</a>
+        </div>
+        <div class="hero-note"><span class="status-dot"></span> Simple plans. Clear prices. No complicated steps.</div>
+      </div>
+      <div class="hero-art" aria-label="FitZone fitness graphic">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+        <div class="hero-badge"><strong>GO</strong><span>FIT</span></div>
+        <div class="art-label">STAY<br>CONSISTENT</div>
+      </div>
+    </section>
+
+    <section class="plans section-wrap" id="plans">
+      <div class="section-heading">
+        <p class="eyebrow">FIND YOUR FIT</p>
+        <h2>Membership <span>Plans</span></h2>
+        <p>Choose a plan that matches your schedule and fitness goals.</p>
+      </div>
+      <div class="plan-grid">
+        <article class="plan-card">
+          <div class="plan-top"><span class="plan-label">FLEXIBLE</span><span class="plan-icon">01</span></div>
+          <h3>Monthly</h3>
+          <p class="price"><strong>EGP 600</strong><span>/ month</span></p>
+          <p class="plan-description">A simple way to get started and build your routine.</p>
+          <ul>
+            <li>Gym floor access</li>
+            <li>Fitness equipment</li>
+            <li>Monthly plan</li>
+          </ul>
+          <button class="button choose-plan" type="button" data-plan="Monthly">Choose Monthly</button>
+        </article>
+
+        <article class="plan-card featured">
+          <div class="popular-tag">POPULAR CHOICE</div>
+          <div class="plan-top"><span class="plan-label">BEST BALANCE</span><span class="plan-icon">02</span></div>
+          <h3>Quarterly</h3>
+          <p class="price"><strong>EGP 1,500</strong><span>/ 3 months</span></p>
+          <p class="plan-description">Stay consistent with a plan for the next three months.</p>
+          <ul>
+            <li>Gym floor access</li>
+            <li>Fitness equipment</li>
+            <li>Three-month plan</li>
+          </ul>
+          <button class="button choose-plan" type="button" data-plan="Quarterly">Choose Quarterly</button>
+        </article>
+
+        <article class="plan-card">
+          <div class="plan-top"><span class="plan-label">LONG-TERM</span><span class="plan-icon">03</span></div>
+          <h3>Annual</h3>
+          <p class="price"><strong>EGP 5,000</strong><span>/ year</span></p>
+          <p class="plan-description">Make fitness part of your long-term lifestyle.</p>
+          <ul>
+            <li>Gym floor access</li>
+            <li>Fitness equipment</li>
+            <li>Annual plan</li>
+          </ul>
+          <button class="button choose-plan" type="button" data-plan="Annual">Choose Annual</button>
+        </article>
+      </div>
+      <p class="price-note">Coursework demo: prices are sample values and are not verified offers from a real gym.</p>
+    </section>
+
+    <section class="about section-wrap" id="about">
+      <div class="about-mark">FZ<span>+</span></div>
+      <div>
+        <p class="eyebrow">ABOUT FITZONE</p>
+        <h2>Make your next step <span>count.</span></h2>
+        <p>This educational website demonstrates a simple way to present gym membership plans and guide visitors to a request form. It was organized as a project using the six stages of the Waterfall Model.</p>
+      </div>
+    </section>
+
+    <section class="contact section-wrap" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">TAKE THE FIRST STEP</p>
+        <h2>Membership <span>Request</span></h2>
+        <p>Fill in the demo form below to see the page validation and confirmation.</p>
+      </div>
+      <form id="membership-form" class="membership-form" novalidate>
+        <div class="form-row">
+          <label for="full-name">Full name</label>
+          <input id="full-name" name="fullName" type="text" placeholder="Enter your name" autocomplete="name" required>
+          <small class="field-error" id="name-error"></small>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" autocomplete="tel" required>
+          <small class="field-error" id="phone-error"></small>
+        </div>
+        <div class="form-row">
+          <label for="plan">Membership plan</label>
+          <select id="plan" name="plan" required>
+            <option value="">Select a plan</option>
+            <option value="Monthly">Monthly — EGP 600</option>
+            <option value="Quarterly">Quarterly — EGP 1,500</option>
+            <option value="Annual">Annual — EGP 5,000</option>
+          </select>
+          <small class="field-error" id="plan-error"></small>
+        </div>
+        <button class="button submit-button" type="submit">Submit Request</button>
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        <p class="privacy-note">Demo only: this form does not send or save personal information.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#home">FIT<span>ZONE</span><small>GYM</small></a>
+    <p>Coursework demonstration website — Waterfall Model.</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+</body>
+</html>
